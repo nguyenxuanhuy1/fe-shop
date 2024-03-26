@@ -1,0 +1,12 @@
+.container-sm {
+
+    max-width: 45%;
+}
+
+input {
+    border: 2px solid #3498db;
+}
+
+.form-label {
+    color: azure;
+}

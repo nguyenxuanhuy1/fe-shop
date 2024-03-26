@@ -1,0 +1,38 @@
+<div class="wrapper row1">
+    <header id="header" class="hoc clear">
+        <div id="logo" class="fl_left" routerLink="">
+            <img class="logoname" src="../assets/img/logo.png" alt="Ảnh Logo">
+        </div>
+        <nav id="mainav" class="fl_right">
+            <ul class="clear">
+
+                <li><a href="#">Liên hệ</a>
+                    <ul>
+                        <li><a href="https://www.facebook.com/huy.nguyenxuan.507027" target="_blank">Facebook</a></li>
+                        <li><a href="#">Tiktok</a></li>
+                        <li><a href="#">Xem địa chỉ Shop</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nạp tiền</a>
+                    <ul>
+                        <li><a href="#">Nạp bằng thẻ cào</a></li>
+                        <li><a href="#">Nạp bằng MoMo</a></li>
+                    </ul>
+                </li>
+                <li *ngIf="!authenticated">
+                    <a routerLink="/login">Đăng nhập</a>
+                </li>
+                <li *ngIf="authenticated">
+                    <a>{{ message }}</a>
+                    <ul>
+                        <li><a>Coin: {{coin}}</a></li>
+                        <li><a>Lịch sử nạp</a></li>
+                    </ul>
+                </li>
+                <li *ngIf="!authenticated"><a routerLink="/register">Đăng Kí</a></li>
+                <li><a routerLink="/cart">Giỏ hàng</a></li>
+                <li *ngIf="authenticated"><a routerLink="/login" (click)="logout()">Thoát</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>

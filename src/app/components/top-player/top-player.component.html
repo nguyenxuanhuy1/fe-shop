@@ -1,0 +1,19 @@
+<div class="wrapper gradient">
+    <div class="container">
+        <div class="sectiontitle">
+            <h6 class="heading font-x2">Top Tiêu Tiền.</h6>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4 col-sm-12" *ngFor="let top of data">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Kiện Tướng: {{top.name}}</h5>
+                        <p class="card-text"><strong>Đã Tiêu: {{top.spent}}</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-spin></app-spin>
+</div>

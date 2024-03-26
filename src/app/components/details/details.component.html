@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="container mt-5" *ngFor="let item of items">
+    <div class="notranfer">
+        <div class="row">
+            <div class="col-6 col-md-6">
+                <h5 class="card-title card-text">Mã #<span #idElement>{{item.id}}</span></h5>
+
+            </div>
+            <div class="col-6 col-md-6 d-flex justify-content-center gap-4">
+                <a class="btn btn-primary">Nạp tiền</a>
+                <a class="btn btn-primary" (click)="AddToCart()">Mua</a>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-6 col-md-4">
+                <p class="card-text"><strong>Ngọc: </strong> <span #gemElement>{{item.gem}}</span></p>
+                <p class="card-text"><strong>tướng: </strong> <span #generalsElement>{{item.generals}}</span></p>
+            </div>
+            <div class="col-6 col-md-4">
+                <p class="card-text"><strong>Trang phục: </strong> <span #skinElement>{{item.skin}}</span></p>
+                <p class="card-text"><strong>Rank: </strong> <span #rankElement>{{item.rank}}</span></p>
+            </div>
+            <div class="col-6 col-md-4">
+                <p class="card-text"><strong>Giá: </strong> <span #priceElement>{{item.price}}</span></p>
+                <p class="card-text"><strong>Trạng thái: </strong> <span #statusElement>{{item.status}}</span></p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-12" *ngFor="let item of items">
+            <div class="card">
+                <div class="card-body">
+                    <img [src]="link + item.img" alt="Ảnh nick">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

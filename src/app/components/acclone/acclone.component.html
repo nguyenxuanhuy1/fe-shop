@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="container">
+    <app-search></app-search>
+    <div class="row">
+        <div *ngFor="let item of items | paginate: { itemsPerPage: pageSize, currentPage: page, totalItems: totalItems }"
+            class="col-12 col-xl-3 mt-5">
+            <div class=" card">
+                <div class="image-container">
+                    <img [src]="link + item.img" alt="Ảnh nick">
+                    <span class="text-overlay">#{{item.id}}</span>
+                </div>
+
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ item.rank }}</h5>
+                    <p class="card-text"></p>
+                    <div class="d-flex justify-content-center gap-4">
+                        <a href="#" class="btn btn-primary pr-1">Mua ngay</a>
+                        <a class="btn btn-primary" routerLink="/details/{{item.id}}">chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <pagination-controls (pageChange)="pageChanged($event)" previousLabel="Trang trước" nextLabel="Trang sau">
+            </pagination-controls>
+        </div>
+    </div>
+    <app-footer></app-footer>

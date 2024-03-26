@@ -1,0 +1,64 @@
+<h1 class="form-label d-flex justify-content-center">Sửa</h1>
+<div class="container-sm mt-5 d-flex justify-content-center">
+    <form method="post" (ngSubmit)="submit()" class="w-100">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="ngoc" class="form-label">Ngọc:</label>
+                    <input formControlName="gem" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="trang-phuc" class="form-label">Trang phục:</label>
+                    <input formControlName="skin" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="gia" class="form-label">Giá:</label>
+                    <input formControlName="price" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="tuong" class="form-label">Tướng:</label>
+                    <input formControlName="generals" class="form-control">
+                </div>
+                <!-- <div class="mb-3">
+                    <label class="custom-file">
+                        <input type="file" (change)="onFileSelected($event)" class="custom-file-input">
+                        <span class="custom-file-control"></span>
+                    </label>
+                </div> -->
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="rank" class="form-label">Rank:</label>
+                    <input formControlName="rank" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="trang-thai" class="form-label">Trạng thái:</label>
+                    <input formControlName="status" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="type" class="form-label">Loại:</label>
+                    <input formControlName="type" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="type" class="form-label">add:</label>
+                    <input formControlName="add" class="form-control">
+                </div>
+
+                <!-- <div class="mb-3">
+                    <label for="type" class="form-label">img:</label>
+                    <input formControlName="img" id="myInput" class="form-control">
+                </div> -->
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="text-center">
+                <input type="button" (click)="submit()" value="Tải lên" class="btn btn-primary">
+            </div>
+        </div>

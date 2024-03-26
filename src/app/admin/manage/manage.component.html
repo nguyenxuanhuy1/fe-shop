@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="container">
+    <br>
+    <app-search (searchResultsChange)="items = $event"></app-search>
+    <div class="row">
+        <div *ngFor="let item of items | paginate: { itemsPerPage: pageSize, currentPage: page, totalItems: totalItems }"
+            class="col-6 col-xl-3 mt-5">
+            <div class="card">
+
+                <img [src]="link + item.img" alt="Ảnh nick">
+                <div class="card-body">
+
+                    <h5 class="card-title text-overlay">mã #{{item.id}}</h5>
+                    <h5 class="card-title">Giá: {{item.price}}</h5>
+                    <p class="card-text"></p>
+                    <button (click)="ondelete(item.id)" class="btn btn-danger">Delete</button>
+                    <button class="btn btn-warning mx-2" routerLink="/edit/{{item.id}}">sửa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <pagination-controls (pageChange)="pageChanged($event)" previousLabel="Trước" nextLabel="Sau">
+            </pagination-controls>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

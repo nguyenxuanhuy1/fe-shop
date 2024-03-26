@@ -1,0 +1,26 @@
+<body>
+    <app-header></app-header>
+    <div class="sun"></div>
+    <div class="center">
+        <h1>Đăng Nhập</h1>
+        <form [formGroup]="form" (submit)="submit()">
+
+            <div class="txt_field">
+                <label for="username"></label>
+                <span></span>
+                <input formControlName="email" type="email" class="form-control" placeholder="Email" required>
+
+            </div>
+            <div class="txt_field">
+                <label for="password"></label>
+                <span></span>
+                <input formControlName="password" type="password" class="form-control" placeholder="Password" required>
+            </div>
+            <!-- <div class="pass">Quên mật khẩu?</div> -->
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Chưa có tài khoản? <a routerLink="/register">Đăng kí</a>
+            </div>
+        </form>
+    </div>
+</body>

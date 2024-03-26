@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="search-container col-12 col-xl-4">
+        <span class="search-icon" style="color: antiquewhite;">Giá từ |</span>
+        <select class="search-select" id="gia-select" [(ngModel)]="selectedPriceRange" name="selectedPriceRange"
+            (change)="onDropdownChange()">
+
+            <option value="item1">Tìm theo giá</option>
+            <option value="0-50000">0->50.000</option>
+            <option value="50000-200000">50.000->200.000</option>
+            <option value=">200000">>200.000</option>
+        </select>
+    </div>
+    <!-- <div class="search-container col-12 col-md-4">
+        <span class="search-icon">Mã số |</span>
+        <input type="text" name="search" class="search-input" id="ma-so-input" placeholder=" Nhập mã">
+    </div> -->
+    <div class="col-12 col-md-4">
+        <a class="btn btn-primary pr-1" (click)="search()">Tìm Kiếm</a>
+    </div>

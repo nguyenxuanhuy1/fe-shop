@@ -1,0 +1,27 @@
+<body>
+    <app-header></app-header>
+    <div class="sun"></div>
+    <div class="center">
+        <h1>Đăng kí</h1>
+        <form [formGroup]="form" (submit)="submit()">
+            <div class="txt_field">
+                <label for="username"></label>
+                <span></span>
+                <input formControlName="name" class="form-control" placeholder="Name" required>
+
+            </div>
+            <div class="txt_field">
+                <label for="password"></label>
+                <span></span>
+                <input formControlName="email" type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="txt_field">
+                <label for="password"></label>
+                <span></span>
+                <input formControlName="password" type="password" class="form-control" placeholder="Password" required>
+            </div>
+            <input type="submit">
+            <div class="signup_link"></div>
+        </form>
+    </div>
+</body>
